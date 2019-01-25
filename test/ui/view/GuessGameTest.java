@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class GuessGameTest {
 
@@ -16,8 +17,10 @@ public class GuessGameTest {
 	
 	@Before
 	public void setUp () {
-		System.setProperty("webdriver.chrome.driver", "/Applications/chromedriver");
-		driver = new ChromeDriver();
+//		System.setProperty("webdriver.chrome.driver", "/Applications/chromedriver");
+//		driver = new ChromeDriver();
+		System.setProperty("webdriver.gecko.driver", "/Applications/geckodriver");
+		driver = new FirefoxDriver();
 	}
 	
 	@Test
